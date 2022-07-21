@@ -26,7 +26,17 @@ class RoomAdmin(admin.ModelAdmin):
     fieldsets = (
         (
             "Basic Info",
-            {"fields": ("name", "description", "country", "address", "city", "price")},
+            {
+                "fields": (
+                    "name",
+                    "description",
+                    "country",
+                    "address",
+                    "city",
+                    "price",
+                    "room_type",
+                )
+            },
         ),
         (
             "Times",
@@ -90,6 +100,8 @@ class RoomAdmin(admin.ModelAdmin):
 
     def count_photos(self, obj):
         return obj.photos.count()
+
+    count_photos.short_description = "Photo Count"
 
 
 @admin.register(models.Photo)
