@@ -9,6 +9,7 @@ pillow = "*"
 django-countries = "*"
 django-seed = "*"
 postgres = "*"
+django-dotenv = "*"
 
 [dev-packages]
 flake8 = "*"
