@@ -1,14 +1,34 @@
-<a href="{% url 'core:home'%}">Nbnb</a>
-<ul>
+{% load i18n %}
+<ul class="flex items-center text-sm font-medium h-full">
   {% if user.is_authenticated %}
-    <li>
+    <li class="nav_link">
+      <a href="{% url 'users:switch-hosting' %}">
+        {% if request.session.is_hosting %}
+          Stop hosting
+        {% else %}
+          Start hosting
+        {% endif %}
+      </a>
+    </li>
+    {% if request.session.is_hosting %}
+      <li class="nav_link">
+        <a href="{% url 'rooms:create' %}">Create Room</a>
+      </li>
+    {% endif %}
+    <li class="nav_link">
+      <a href="{% url 'lists:see-favs' %}">{% trans "Favs" %} ({{user.list.rooms.count}})</a>
+    </li>
+    <li class="nav_link">
+      <a href="{{user.get_absolute_url}}">Profile</a>
+    </li>
+    <li class="nav_link">
       <a href="{% url 'users:logout'%}">Log out</a>
     </li>
   {% else %}
-    <li>
+    <li class="nav_link">
       <a href="{% url 'users:login'%}">Login</a>
     </li>
-    <li>
+    <li class="nav_link">
       <a href="{% url 'users:signup'%}">Sign Up</a>
     </li>
   {% endif %}

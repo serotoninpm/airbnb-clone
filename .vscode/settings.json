@@ -13,9 +13,9 @@
     "emmet.includeLanguages": {
         "django-html": "html"
     },
-    "unibeautify.enabled": true,
+    "unibeautify.enabled": false,
     "[django-html]": {
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": false,
         "editor.defaultFormatter": "Glavin001.unibeautify-vscode"
     }
 }

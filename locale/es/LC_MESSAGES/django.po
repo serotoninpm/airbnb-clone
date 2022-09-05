@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-04 01:15+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/base.html:29
+msgid "Search by City"
+msgstr "Buscar por Ciudad"
+
+#: templates/partials/footer.html:7
+msgid "Please don't copy us."
+msgstr "Por favor no nos copies."
+
+#: templates/partials/footer.html:9
+msgid "All rights reserved"
+msgstr "Todos los derechos reservados"
+
+#: templates/rooms/room_list.html:28
+#, python-format
+msgid "Page %(current_page)s of %(total_pages)s"
+msgstr "Página %(current_page)s de %(total_pages)s"
+
+#: users/mixins.py:14
+msgid "Can't go there"
+msgstr "No puedes ir ahí"
+
+#: users/models.py:20
+msgid "Male"
+msgstr "Hombre"
+
+#: users/models.py:21
+msgid "Female"
+msgstr "Mujer"
+
+#: users/models.py:22
+msgid "Other"
+msgstr "Otro"
+
+#: users/models.py:29
+msgid "English"
+msgstr "Inglés"
+
+#: users/models.py:30
+msgid "Korean"
+msgstr "Coreano"
+
+#: users/models.py:50
+msgid "gender"
+msgstr "género"
+
+#: users/models.py:52
+msgid "bio"
+msgstr "biografía"
+
+#: users/models.py:55
+msgid "language"
+msgstr "lenguage"
+
+#: users/models.py:82
+msgid "Verify Airbnb Account"
+msgstr "Verificar Cuenta de Airbnb"
