@@ -11,8 +11,8 @@ django-seed = "*"
 postgres = "*"
 django-dotenv = "*"
 requests = "*"
-awsebcli = "*"
 sentry-sdk = "*"
+django-storages = "*"
 
 [dev-packages]
 flake8 = "*"

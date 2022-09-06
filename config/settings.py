@@ -27,7 +27,8 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET", "NTfF6fEHnYx^P6@HJx@K6M")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ.get("DEBUG"))
 
-ALLOWED_HOSTS = [".elasticbeanstalk.com"]
+
+ALLOWED_HOSTS = [".elasticbeanstalk.com", "127.0.0.1"]
 
 
 # Application definition
@@ -50,7 +51,7 @@ PROJECT_APPS = [
     "conversations.apps.ConversationsConfig",
 ]
 
-THIRD_PARTY_APPS = ["django_countries", "django_seed"]
+THIRD_PARTY_APPS = ["django_countries", "django_seed", "storages"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 
@@ -172,9 +173,21 @@ LOGIN_URL = "/users/login"
 # Locale
 LOCALE_PATHS = (os.path.join(BASE_DIR, "locale"),)
 
+
 # Sentry
 
 if not DEBUG:
+
+    DEFAULT_FILE_STORAGE = "config.custom_storages.UploadStorage"
+    STATICFILES_STORAGE = "config.custom_storages.StaticStorage"
+    AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+    AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+    AWS_STORAGE_BUCKET_NAME = "airbnb-clone-nomadcoders-wook2"
+    AWS_DEFAULT_ACL = "public-read"
+
+    AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.ap-northeast-2.amazonaws.com"
+    STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/static/"
+
     sentry_sdk.init(
         dsn=os.environ.get("SENTRY_URL"),
         integrations=[
