@@ -12,6 +12,7 @@ postgres = "*"
 django-dotenv = "*"
 requests = "*"
 awsebcli = "*"
+sentry-sdk = "*"
 
 [dev-packages]
 flake8 = "*"
