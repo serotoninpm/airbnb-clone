@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "bb926976b6fd77425e90d2f46b39677044f23b2a535b36f21a5be84ef8e9b9ce"
+            "sha256": "c78e8e25e2e82010de00322e9af1405b7f1264e9ddd67392ac62acbc3421a93b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,22 @@
         ]
     },
     "default": {
+        "boto3": {
+            "hashes": [
+                "sha256:60003d2b83268a303cf61b78a0b59ebe2abe87e2f21308b55a99f25fd9bca4db",
+                "sha256:8b866aa5f51f66663a3d7fb24450a6f7e84da1c996e0b0aa738d0e12c34fc92b"
+            ],
+            "index": "pypi",
+            "version": "==1.24.66"
+        },
+        "botocore": {
+            "hashes": [
+                "sha256:6293d1cb392a4779cf0a44055cae9ac0728809c14a11f2d91e679a00a9beae20",
+                "sha256:6c8c8c82b38ba2353bd3bc071019ab44d8a160b9d17f3ab166f0ceaf1ca38c12"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==1.27.66"
+        },
         "certifi": {
             "hashes": [
                 "sha256:84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d",
@@ -86,6 +102,14 @@
             ],
             "markers": "python_version >= '3.5'",
             "version": "==3.3"
+        },
+        "jmespath": {
+            "hashes": [
+                "sha256:02e2e4cc71b5bcab88332eebf907519190dd9e6e82107fa7f83b1003a6252980",
+                "sha256:90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==1.0.1"
         },
         "pillow": {
             "hashes": [
@@ -253,6 +277,14 @@
             ],
             "index": "pypi",
             "version": "==2.28.1"
+        },
+        "s3transfer": {
+            "hashes": [
+                "sha256:06176b74f3a15f61f1b4f25a1fc29a4429040b7647133a463da8fa5bd28d5ecd",
+                "sha256:2ed07d3866f523cc561bf4a00fc5535827981b117dd7876f036b0c1aca42c947"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==0.6.0"
         },
         "sentry-sdk": {
             "hashes": [
